@@ -202,7 +202,7 @@ function renderOfficers(content) {
         <img src="${escapeHtml(o.photo)}" alt="${escapeHtml(o.name)}" class="officer-photo">
         <p class="role">${escapeHtml(o.role)}</p>
         <p class="name">${escapeHtml(o.name)}</p>
-        <p class="bio">${escapeHtml(o.bio)}</p>
+        ${o.bio ? `<p class="bio">${escapeHtml(o.bio)}</p>` : ""}
       </article>`).join("");
   }
 

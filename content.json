@@ -156,38 +156,38 @@
     "members": [
       {
         "role": "President",
-        "name": "Alex Chen",
-        "bio": "Senior, Biology & English. Interested in narrative medicine and medical ethics.",
+        "name": "Constanza",
+        "bio": "",
         "photo": "images/officer-1.jpg"
       },
       {
         "role": "Vice President",
-        "name": "Maria Gonzalez",
-        "bio": "Junior, Public Health. Focuses on health equity and community outreach.",
+        "name": "Abena",
+        "bio": "",
         "photo": "images/officer-2.jpg"
       },
       {
-        "role": "Editor-in-Chief",
-        "name": "Jordan Lee",
-        "bio": "Senior, Creative Writing. Manages HuMed Review submissions and publication.",
+        "role": "Treasurer",
+        "name": "Gaurav",
+        "bio": "",
         "photo": "images/officer-3.jpg"
       },
       {
-        "role": "Treasurer",
-        "name": "Sam Patel",
-        "bio": "Sophomore, Economics. Handles club finances and event budgeting.",
+        "role": "HuMed Review Editor-in-Chief",
+        "name": "Netta",
+        "bio": "",
         "photo": "images/officer-4.jpg"
       },
       {
-        "role": "Events Coordinator",
-        "name": "Emily Watson",
-        "bio": "Junior, History. Plans symposiums, speaker events, and reading groups.",
+        "role": "Social Media Manager",
+        "name": "Noa",
+        "bio": "",
         "photo": "images/officer-5.jpg"
       },
       {
-        "role": "Social Media Chair",
-        "name": "Chris Nguyen",
-        "bio": "Sophomore, Communications. Runs @yalehumed and promotional outreach.",
+        "role": "Event Coordinator",
+        "name": "Leslie",
+        "bio": "",
         "photo": "images/officer-6.jpg"
       }
     ]
