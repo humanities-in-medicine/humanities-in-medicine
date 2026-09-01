@@ -42,74 +42,99 @@
     ],
     "highlights": [
       {
-        "date": "Spring 2026",
-        "title": "Symposium: Narrative Medicine",
-        "description": "Keynote on storytelling in clinical practice, followed by student panel presentations.",
+        "date": "April 2026",
+        "title": "Humanities in Medicine Celebrations 2026",
+        "description": "Our annual symposium on healing, narratives, and the future of medicine — fireside chat, panel, and workshop with Yale faculty.",
         "link": "events.html",
         "linkText": "View all events →",
         "image": "images/symposium.jpg",
-        "imageAlt": "Symposium event"
+        "imageAlt": "HuMed symposium"
       },
       {
-        "date": "Fall 2025",
-        "title": "HuMed Review, Vol. 4",
-        "description": "Our latest issue features essays on medical ethics, patient narratives, and more.",
-        "link": "journal.html",
-        "linkText": "Browse past issues →",
-        "image": "images/journal.jpg",
-        "imageAlt": "HuMed Review"
+        "date": "October 2025",
+        "title": "HuMed Art Night at the Peabody",
+        "description": "An afternoon at the Peabody exploring how art relates to medicine and science, with journaling and sketching supplies provided.",
+        "link": "events.html",
+        "linkText": "View all events →",
+        "image": "images/art-night-peabody.png",
+        "imageAlt": "HuMed Art Night"
       }
     ]
   },
   "events": {
     "bannerImage": "images/symposium.jpg",
     "bannerAlt": "Conference and symposium setting",
-    "lead": "A record of our past symposiums, speaker events, and club gatherings. Follow @yalehumed on Instagram for upcoming dates and registration details.",
+    "lead": "Past HuMed events from Yale Connect — symposiums, art nights, study breaks, and more. Follow @yalehumed on Instagram for what's coming next.",
     "items": [
       {
-        "date": "March 15, 2026",
-        "title": "Annual Symposium: Narrative Medicine",
-        "description": "Keynote by Dr. Jane Smith on the role of storytelling in clinical care. Student presentations on patient narratives and reflective writing in medicine.",
-        "location": "Campus Center, Room 201",
+        "date": "April 19, 2026",
+        "title": "HuMed Symposium Debrief & Elections",
+        "description": "Debrief of the 2026 symposium and elections for the 2026–27 board.",
+        "location": "Yale campus",
+        "image": null
+      },
+      {
+        "date": "April 18, 2026",
+        "title": "Humanities in Medicine Celebrations 2026",
+        "description": "Our annual symposium, themed \"Healing, Narratives, and the Future of Medicine\" — a fireside chat, panel, and workshop on creative expression and the human experience in medicine, with Yale faculty. Food and drinks provided.",
+        "location": "Humanities Quadrangle, Room 131",
         "image": "images/symposium.jpg",
-        "imageAlt": "Symposium lecture hall"
+        "imageAlt": "HuMed symposium"
       },
       {
-        "date": "February 8, 2026",
-        "title": "Film Screening & Discussion",
-        "description": "Screening of The Doctor followed by a facilitated discussion on physician empathy and the doctor-patient relationship.",
-        "location": "Humanities Hall, Auditorium",
-        "image": "images/community.jpg",
-        "imageAlt": "Group discussion"
-      },
-      {
-        "date": "November 12, 2025",
-        "title": "Fall Symposium: Ethics at the Bedside",
-        "description": "Panel discussion with bioethicists and clinicians on end-of-life care, informed consent, and cultural competence in healthcare.",
-        "location": "Medical School, Lecture Hall B",
-        "image": null
-      },
-      {
-        "date": "October 3, 2025",
-        "title": "Reading Group Kickoff",
-        "description": "First meeting of the semester discussing excerpts from The Spirit Catches You and You Fall Down.",
-        "location": "Library, Room 104",
+        "date": "February 7, 2026",
+        "title": "Comics from the Heart",
+        "description": "Explored medical storytelling through comics ahead of Valentine's Day and American Heart Month — cardiovascular health, medicine, and designing our own medical comic strips. Snacks provided.",
+        "location": "17 Hillhouse Library, Classroom 07",
         "image": "images/books.jpg",
-        "imageAlt": "Reading group in library"
+        "imageAlt": "Comics workshop"
       },
       {
-        "date": "April 20, 2025",
-        "title": "Spring Symposium: Art & Healing",
-        "description": "Workshops on medical illustration, poetry in hospitals, and the therapeutic role of creative expression for patients and providers.",
-        "location": "Arts Center, Gallery Space",
+        "date": "December 14, 2025",
+        "title": "Holiday Party Study Break",
+        "description": "Hot chocolate and ornament decorating to close out the semester.",
+        "location": "Yale campus",
+        "image": "images/community.jpg",
+        "imageAlt": "Holiday study break"
+      },
+      {
+        "date": "November 15, 2025",
+        "title": "The Pitt Watch Party",
+        "description": "Watch party for The Pitt with snacks.",
+        "location": "Yale campus",
+        "image": "images/community.jpg",
+        "imageAlt": "Watch party"
+      },
+      {
+        "date": "October 25, 2025",
+        "title": "HuMed Art Night at the Peabody",
+        "description": "An afternoon at the Yale Peabody Natural History Museum — exploring the museum and practicing how art relates to medicine and science. Journaling and sketching supplies provided.",
+        "location": "Meet outside the Peabody Museum",
+        "image": "images/art-night-peabody.png",
+        "imageAlt": "HuMed Art Night at the Peabody flyer"
+      },
+      {
+        "date": "September 27, 2025",
+        "title": "Humanities & Medicine Meet & Greet",
+        "description": "Meet other students interested in the intersections of medicine and the humanities, and learn about HuMed over food.",
+        "location": "WLH 114",
+        "image": "images/community.jpg",
+        "imageAlt": "Meet and greet"
+      },
+      {
+        "date": "April 29, 2025",
+        "title": "HuMed Study Break",
+        "description": "Reading week study break with Chick-fil-A.",
+        "location": "Humanities Quadrangle, Room 102",
         "image": null
       },
       {
-        "date": "March 1, 2025",
-        "title": "Guest Lecture: History of Public Health",
-        "description": "Professor Alan Reyes traced the history of epidemics and public health policy from the 19th century to the present day.",
-        "location": "History Department, Seminar Room",
-        "image": null
+        "date": "April 11, 2025",
+        "title": "2025 HuMed Celebration with Dr. Adjoa Boateng Evans",
+        "description": "Discussion of prose, poetry, and the human experience at the intersection of faith, medicine, the arts, and the disadvantaged with Dr. Adjoa Boateng Evans YC '07, Assistant Professor of Anesthesiology at Duke University School of Medicine.",
+        "location": "Humanities Quadrangle, Room 136",
+        "image": "images/symposium.jpg",
+        "imageAlt": "HuMed celebration lecture"
       }
     ]
   },
