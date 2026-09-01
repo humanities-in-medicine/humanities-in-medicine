@@ -176,15 +176,13 @@ function renderJournal(content) {
   const note = document.getElementById("submission-note");
   if (note) note.textContent = journal.submissionNote;
 
-  const email = document.getElementById("submission-email");
   const submissionBlock = document.getElementById("submission-contact");
-  if (email && site.email) {
-    email.href = `mailto:${site.email}`;
-    email.textContent = site.email;
+  if (submissionBlock && journal.submissionUrl) {
+    submissionBlock.innerHTML = `<a href="${escapeHtml(journal.submissionUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Submit to the HuMed Review</a>`;
+  } else if (submissionBlock && site.email) {
+    submissionBlock.innerHTML = `Email submissions to <a href="mailto:${escapeHtml(site.email)}">${escapeHtml(site.email)}</a>.`;
   } else if (submissionBlock && site.instagram) {
-    submissionBlock.innerHTML = `Send submissions via DM on <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a> with the subject line <em>HuMed Review Submission</em>.`;
-  } else if (email) {
-    email.closest("p")?.remove();
+    submissionBlock.innerHTML = `Send submissions via DM on <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a>.`;
   }
 }
 
