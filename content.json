@@ -1,27 +1,29 @@
 {
   "site": {
-    "name": "Humanities in Medicine",
-    "tagline": "Exploring the human side of healthcare",
-    "description": "A college club exploring the intersection of humanities and medicine.",
-    "email": "humanitiesinmedicine@college.edu",
-    "instagram": "https://instagram.com/humanitiesinmedicine",
-    "instagramHandle": "@humanitiesinmedicine",
+    "name": "HuMed",
+    "fullName": "Humanities in Medicine at Yale",
+    "tagline": "Exploring the human side of healthcare at Yale",
+    "description": "Yale's student organization at the intersection of humanities and medicine.",
+    "email": "",
+    "instagram": "https://www.instagram.com/yalehumed/",
+    "instagramHandle": "@yalehumed",
+    "signupUrl": "https://yaleconnect.yale.edu/HuMed/club_signup",
     "year": 2026
   },
   "home": {
-    "lead": "We are a student organization dedicated to the intersection of humanities and medicine. Through symposiums, our student journal, and community events, we examine how literature, ethics, history, and the arts shape the practice and experience of medicine.",
+    "lead": "HuMed is Yale's student organization dedicated to the intersection of humanities and medicine. Through symposiums, the HuMed Review, and community events, we examine how literature, ethics, history, and the arts shape the practice and experience of medicine.",
     "heroImage": "images/hero.jpg",
     "heroImageAlt": "Healthcare professional holding a patient's hand",
     "pillars": [
       {
         "title": "Annual Symposium",
-        "description": "Each year we host a symposium bringing together students, faculty, and clinicians to discuss topics at the crossroads of humanities and medicine.",
+        "description": "Each year we host a symposium bringing together Yale students, faculty, and clinicians to discuss topics at the crossroads of humanities and medicine.",
         "image": "images/symposium.jpg",
         "imageAlt": "Students at a symposium lecture"
       },
       {
-        "title": "Student Journal",
-        "description": "Our peer-reviewed journal publishes student essays, creative writing, and reflections on medicine, health, and the human experience.",
+        "title": "HuMed Review",
+        "description": "Our student publication publishes essays, creative writing, and reflections on medicine, health, and the human experience.",
         "image": "images/journal.jpg",
         "imageAlt": "Books and reading materials"
       },
@@ -50,19 +52,19 @@
       },
       {
         "date": "Fall 2025",
-        "title": "Journal Issue Vol. 4",
+        "title": "HuMed Review, Vol. 4",
         "description": "Our latest issue features essays on medical ethics, patient narratives, and more.",
         "link": "journal.html",
         "linkText": "Browse past issues →",
         "image": "images/journal.jpg",
-        "imageAlt": "Journal reading"
+        "imageAlt": "HuMed Review"
       }
     ]
   },
   "events": {
     "bannerImage": "images/symposium.jpg",
     "bannerAlt": "Conference and symposium setting",
-    "lead": "A record of our past symposiums, speaker events, and club gatherings. Check our Instagram for upcoming dates and registration details.",
+    "lead": "A record of our past symposiums, speaker events, and club gatherings. Follow @yalehumed on Instagram for upcoming dates and registration details.",
     "items": [
       {
         "date": "March 15, 2026",
@@ -112,44 +114,45 @@
     ]
   },
   "journal": {
+    "name": "HuMed Review",
     "bannerImage": "images/journal.jpg",
     "bannerAlt": "Books and journal reading",
-    "lead": "Our annual journal publishes student essays, creative writing, and reflections at the intersection of humanities and medicine. Browse past issues below.",
+    "lead": "The HuMed Review is our student publication — essays, creative writing, and reflections at the intersection of humanities and medicine. Browse past issues below.",
     "issues": [
       {
-        "title": "Volume 4 — Fall 2025",
+        "title": "HuMed Review, Vol. 4 — Fall 2025",
         "theme": "Theme: Ethics at the Bedside — 12 essays, 4 creative pieces",
         "pdfUrl": "#",
         "coverImage": "images/journal.jpg",
         "coverAlt": "Volume 4 cover"
       },
       {
-        "title": "Volume 3 — Spring 2025",
+        "title": "HuMed Review, Vol. 3 — Spring 2025",
         "theme": "Theme: Art & Healing — 10 essays, 6 creative pieces",
         "pdfUrl": "#",
         "coverImage": "images/books.jpg",
         "coverAlt": "Volume 3 cover"
       },
       {
-        "title": "Volume 2 — Fall 2024",
+        "title": "HuMed Review, Vol. 2 — Fall 2024",
         "theme": "Theme: Narratives of Care — 11 essays, 3 creative pieces",
         "pdfUrl": "#",
         "coverImage": "images/hero.jpg",
         "coverAlt": "Volume 2 cover"
       },
       {
-        "title": "Volume 1 — Spring 2024",
+        "title": "HuMed Review, Vol. 1 — Spring 2024",
         "theme": "Inaugural issue — 8 essays, 5 creative pieces",
         "pdfUrl": "#",
         "coverImage": "images/community.jpg",
         "coverAlt": "Volume 1 cover"
       }
     ],
-    "submissionNote": "We accept submissions from all students. Essays, poetry, short fiction, and reflective pieces related to medicine and the humanities are welcome."
+    "submissionNote": "We accept submissions from Yale students. Essays, poetry, short fiction, and reflective pieces related to medicine and the humanities are welcome."
   },
   "officers": {
-    "lead": "Our leadership team organizes symposiums, publishes the journal, and builds community around humanities and medicine on campus.",
-    "contactIntro": "Have questions about joining the club, submitting to the journal, or partnering on an event? Reach out — we'd love to hear from you.",
+    "lead": "Our leadership team organizes symposiums, publishes the HuMed Review, and builds community around humanities and medicine at Yale.",
+    "contactIntro": "Interested in joining HuMed, submitting to the HuMed Review, or partnering on an event? Sign up on Yale Connect or reach out on Instagram — we'd love to hear from you.",
     "members": [
       {
         "role": "President",
@@ -166,7 +169,7 @@
       {
         "role": "Editor-in-Chief",
         "name": "Jordan Lee",
-        "bio": "Senior, Creative Writing. Manages journal submissions and publication.",
+        "bio": "Senior, Creative Writing. Manages HuMed Review submissions and publication.",
         "photo": "images/officer-3.jpg"
       },
       {
@@ -184,7 +187,7 @@
       {
         "role": "Social Media Chair",
         "name": "Chris Nguyen",
-        "bio": "Sophomore, Communications. Runs our Instagram and promotional outreach.",
+        "bio": "Sophomore, Communications. Runs @yalehumed and promotional outreach.",
         "photo": "images/officer-6.jpg"
       }
     ]

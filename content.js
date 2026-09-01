@@ -27,9 +27,18 @@ function applySiteMeta(site) {
     el.textContent = site.name;
   });
 
+  document.querySelectorAll("[data-site-full-name]").forEach((el) => {
+    el.textContent = site.fullName || site.name;
+  });
+
   document.querySelectorAll("[data-site-email]").forEach((el) => {
-    el.href = `mailto:${site.email}`;
-    el.textContent = site.email;
+    if (site.email) {
+      el.href = `mailto:${site.email}`;
+      el.textContent = site.email;
+      el.style.display = "";
+    } else {
+      el.style.display = "none";
+    }
   });
 
   document.querySelectorAll("[data-site-instagram]").forEach((el) => {
@@ -37,6 +46,15 @@ function applySiteMeta(site) {
     el.textContent = el.dataset.siteInstagram === "handle"
       ? site.instagramHandle
       : "Instagram";
+  });
+
+  document.querySelectorAll("[data-site-signup]").forEach((el) => {
+    if (site.signupUrl) {
+      el.href = site.signupUrl;
+      el.style.display = "";
+    } else {
+      el.style.display = "none";
+    }
   });
 
   document.querySelectorAll("[data-site-year]").forEach((el) => {
@@ -47,7 +65,7 @@ function applySiteMeta(site) {
 function renderHome(content) {
   const { site, home } = content;
 
-  document.title = site.name;
+  document.title = site.fullName || site.name;
   const meta = document.querySelector('meta[name="description"]');
   if (meta) meta.content = site.description;
 
@@ -56,11 +74,12 @@ function renderHome(content) {
     hero.innerHTML = `
       <div>
         <h1>${escapeHtml(site.name)}</h1>
-        <p class="hero-tagline">${escapeHtml(site.tagline)}</p>
+        <p class="hero-tagline">${escapeHtml(site.fullName || site.tagline)}</p>
         <p class="lead">${escapeHtml(home.lead)}</p>
         <div class="quick-links">
-          <a href="events.html" class="btn">Upcoming Events</a>
-          <a href="journal.html" class="btn btn-outline">Read the Journal</a>
+          <a href="${escapeHtml(site.signupUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Join on Yale Connect</a>
+          <a href="events.html" class="btn btn-outline">Upcoming Events</a>
+          <a href="journal.html" class="btn btn-outline">HuMed Review</a>
         </div>
       </div>
       <figure class="hero-image">
@@ -125,7 +144,11 @@ function renderEvents(content) {
 
 function renderJournal(content) {
   const { site, journal } = content;
-  document.title = `Journal — ${site.name}`;
+  const pubName = journal.name || "HuMed Review";
+  document.title = `${pubName} — ${site.name}`;
+
+  const pageTitle = document.getElementById("journal-title");
+  if (pageTitle) pageTitle.textContent = pubName;
 
   const banner = document.getElementById("page-banner");
   if (banner) {
@@ -154,9 +177,14 @@ function renderJournal(content) {
   if (note) note.textContent = journal.submissionNote;
 
   const email = document.getElementById("submission-email");
-  if (email) {
+  const submissionBlock = document.getElementById("submission-contact");
+  if (email && site.email) {
     email.href = `mailto:${site.email}`;
     email.textContent = site.email;
+  } else if (submissionBlock && site.instagram) {
+    submissionBlock.innerHTML = `Send submissions via DM on <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a> with the subject line <em>HuMed Review Submission</em>.`;
+  } else if (email) {
+    email.closest("p")?.remove();
   }
 }
 
@@ -180,6 +208,12 @@ function renderOfficers(content) {
 
   const intro = document.getElementById("contact-intro");
   if (intro) intro.textContent = officers.contactIntro;
+
+  const signup = document.getElementById("contact-signup");
+  if (signup && site.signupUrl) {
+    signup.href = site.signupUrl;
+    signup.textContent = "Join on Yale Connect";
+  }
 
   const igContact = document.getElementById("contact-instagram");
   if (igContact) {
