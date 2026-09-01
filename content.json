@@ -156,37 +156,37 @@
     "members": [
       {
         "role": "President",
-        "name": "Constanza",
+        "name": "Constanza Biney",
         "bio": "",
         "photo": "images/officer-1.jpg"
       },
       {
         "role": "Vice President",
-        "name": "Abena",
+        "name": "Abena Opoku",
         "bio": "",
         "photo": "images/officer-2.jpg"
       },
       {
         "role": "Treasurer",
-        "name": "Gaurav",
+        "name": "Gaurav Chaudhuri",
         "bio": "",
         "photo": "images/officer-3.jpg"
       },
       {
         "role": "HuMed Review Editor-in-Chief",
-        "name": "Netta",
+        "name": "Netta Dobzinski",
         "bio": "",
         "photo": "images/officer-4.jpg"
       },
       {
         "role": "Social Media Manager",
-        "name": "Noa",
+        "name": "Noa Dobzinski",
         "bio": "",
         "photo": "images/officer-5.jpg"
       },
       {
         "role": "Event Coordinator",
-        "name": "Leslie",
+        "name": "Leslie Diaz",
         "bio": "",
         "photo": "images/officer-6.jpg"
       }
