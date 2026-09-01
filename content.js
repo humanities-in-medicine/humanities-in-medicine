@@ -57,6 +57,15 @@ function applySiteMeta(site) {
     }
   });
 
+  document.querySelectorAll("[data-site-interest]").forEach((el) => {
+    if (site.interestFormUrl) {
+      el.href = site.interestFormUrl;
+      el.style.display = "";
+    } else {
+      el.style.display = "none";
+    }
+  });
+
   document.querySelectorAll("[data-site-year]").forEach((el) => {
     el.textContent = site.year;
   });
@@ -77,9 +86,9 @@ function renderHome(content) {
         <p class="hero-tagline">${escapeHtml(site.fullName || site.tagline)}</p>
         <p class="lead">${escapeHtml(home.lead)}</p>
         <div class="quick-links">
-          <a href="${escapeHtml(site.signupUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Join on Yale Connect</a>
-          <a href="events.html" class="btn btn-outline">Upcoming Events</a>
-          <a href="journal.html" class="btn btn-outline">HuMed Review</a>
+          <a href="${escapeHtml(site.interestFormUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Express Interest</a>
+          <a href="${escapeHtml(site.signupUrl)}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Join on Yale Connect</a>
+          <a href="events.html" class="btn btn-outline">Events</a>
         </div>
       </div>
       <figure class="hero-image">
@@ -210,6 +219,12 @@ function renderOfficers(content) {
   if (signup && site.signupUrl) {
     signup.href = site.signupUrl;
     signup.textContent = "Join on Yale Connect";
+  }
+
+  const interest = document.getElementById("contact-interest");
+  if (interest && site.interestFormUrl) {
+    interest.href = site.interestFormUrl;
+    interest.textContent = "Express Interest";
   }
 
   const igContact = document.getElementById("contact-instagram");
