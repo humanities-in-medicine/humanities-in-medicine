@@ -13,8 +13,8 @@
   },
   "home": {
     "lead": "HuMed is Yale's student organization dedicated to the intersection of humanities and medicine. Through symposiums, the HuMed Review, and community events, we examine how literature, ethics, history, and the arts shape the practice and experience of medicine.",
-    "heroImage": "images/art-night-peabody.png",
-    "heroImageAlt": "Yale Undergraduate Humanities in Medicine Celebrations",
+    "heroImage": "images/celebration-2025-boateng.jpg",
+    "heroImageAlt": "HuMed celebration lecture at Yale",
     "pillars": [
       {
         "title": "Annual Symposium",
@@ -31,8 +31,8 @@
       {
         "title": "Guest Speakers",
         "description": "Talks and conversations with clinicians, scholars, and alumni on the humanities, medicine, and the human experience in healthcare.",
-        "image": "images/symposium.jpg",
-        "imageAlt": "Guest speaker event"
+        "image": "images/celebration-2025-boateng.jpg",
+        "imageAlt": "Guest speaker at HuMed event"
       },
       {
         "title": "Study Breaks",
@@ -136,8 +136,8 @@
         "title": "2025 HuMed Celebration with Dr. Adjoa Boateng Evans",
         "description": "Discussion of prose, poetry, and the human experience at the intersection of faith, medicine, the arts, and the disadvantaged with Dr. Adjoa Boateng Evans YC '07, Assistant Professor of Anesthesiology at Duke University School of Medicine.",
         "location": "Humanities Quadrangle, Room 136",
-        "image": "images/symposium.jpg",
-        "imageAlt": "HuMed celebration lecture"
+        "image": "images/celebration-2025-boateng.jpg",
+        "imageAlt": "2025 HuMed celebration lecture"
       }
     ]
   },
