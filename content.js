@@ -174,7 +174,7 @@ function renderJournal(content) {
         <div class="issue-row">
           <img src="${escapeHtml(issue.coverImage)}" alt="${escapeHtml(issue.coverAlt)}" class="issue-thumb">
           <div>
-            <a href="${escapeHtml(issue.pdfUrl)}" class="issue-link">${escapeHtml(issue.title)}</a>
+            <a href="${escapeHtml(issue.pdfUrl)}" class="issue-link" target="_blank" rel="noopener noreferrer">${escapeHtml(issue.title)}</a>
             <p class="issue-desc">${escapeHtml(issue.theme)}</p>
           </div>
         </div>
