@@ -147,6 +147,23 @@ img {
   padding: 1.25rem;
 }
 
+.submission-flyer {
+  margin: 0 0 1.5rem;
+  max-width: 420px;
+}
+
+.submission-flyer img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
+}
+
+.submission-deadline {
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0 0 1rem;
+}
+
 .issue-row {
   display: flex;
   align-items: center;

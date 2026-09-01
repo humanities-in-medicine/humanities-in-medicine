@@ -143,7 +143,7 @@
     "name": "HuMed Review",
     "bannerImage": "images/journal.jpg",
     "bannerAlt": "Books and journal reading",
-    "lead": "The HuMed Review is our student publication — essays, creative writing, and reflections at the intersection of humanities and medicine. Browse past issues below.",
+    "lead": "The HuMed Review is Yale's undergraduate publication at the intersection of humanities and medicine. Browse past issues below, or submit your work to our open call.",
     "issues": [
       {
         "title": "HuMed Review, Vol. 4 — Fall 2025",
@@ -174,8 +174,10 @@
         "coverAlt": "Volume 1 cover"
       }
     ],
-    "submissionNote": "We accept submissions from Yale students. Essays, poetry, short fiction, and reflective pieces related to medicine and the humanities are welcome.",
-    "submissionUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdO8AG_88-1AJkXWaeg2kRzXkTETTh7WvcozJFORwfUe1f-1A/viewform"
+    "submissionNote": "Yale Undergraduate Humanities in Medicine Celebrations is excited to announce our call for submissions for the Yale Undergraduate Humanities in Medicine Review. We are looking for visual art, creative writing, or scholarly work at the intersection of the humanities and medicine, or art and science. All Yale community members welcome.",
+    "submissionDeadline": "April 3, 2026",
+    "submissionUrl": "https://tinyurl.com/HuMedJournal",
+    "submissionFlyer": "images/humed-review-open-submission.png"
   },
   "officers": {
     "lead": "Our leadership team organizes symposiums, publishes the HuMed Review, and builds community around humanities and medicine at Yale.",

@@ -185,6 +185,24 @@ function renderJournal(content) {
   const note = document.getElementById("submission-note");
   if (note) note.textContent = journal.submissionNote;
 
+  const deadline = document.getElementById("submission-deadline");
+  if (deadline) {
+    if (journal.submissionDeadline) {
+      deadline.textContent = `Submissions due ${journal.submissionDeadline}.`;
+      deadline.style.display = "";
+    } else {
+      deadline.style.display = "none";
+    }
+  }
+
+  const flyer = document.getElementById("submission-flyer");
+  if (flyer && journal.submissionFlyer) {
+    flyer.innerHTML = `<img src="${escapeHtml(journal.submissionFlyer)}" alt="HuMed Review open submission flyer">`;
+    flyer.style.display = "";
+  } else if (flyer) {
+    flyer.style.display = "none";
+  }
+
   const submissionBlock = document.getElementById("submission-contact");
   if (submissionBlock && journal.submissionUrl) {
     submissionBlock.innerHTML = `<a href="${escapeHtml(journal.submissionUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Submit to the HuMed Review</a>`;
