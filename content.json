@@ -13,14 +13,14 @@
   },
   "home": {
     "lead": "HuMed is Yale's student organization dedicated to the intersection of humanities and medicine. Through symposiums, the HuMed Review, and community events, we examine how literature, ethics, history, and the arts shape the practice and experience of medicine.",
-    "heroImage": "images/celebration-2025-boateng.jpg",
-    "heroImageAlt": "HuMed celebration lecture at Yale",
+    "heroImage": "images/art-night-peabody.png",
+    "heroImageAlt": "Yale Undergraduate Humanities in Medicine Celebrations",
     "pillars": [
       {
         "title": "Annual Symposium",
         "description": "Each year we host a symposium bringing together Yale students, faculty, and clinicians to discuss topics at the crossroads of humanities and medicine.",
-        "image": "images/symposium.jpg",
-        "imageAlt": "HuMed symposium audience"
+        "image": "images/celebration-2025-boateng.jpg",
+        "imageAlt": "HuMed symposium lecture"
       },
       {
         "title": "HuMed Review",
@@ -31,7 +31,7 @@
       {
         "title": "Guest Speakers",
         "description": "Talks and conversations with clinicians, scholars, and alumni on the humanities, medicine, and the human experience in healthcare.",
-        "image": "images/celebration-2025-boateng.jpg",
+        "image": "images/symposium.jpg",
         "imageAlt": "Guest speaker at HuMed event"
       },
       {
@@ -48,7 +48,7 @@
         "description": "Our annual symposium on healing, narratives, and the future of medicine — fireside chat, panel, and workshop with Yale faculty.",
         "link": "events.html",
         "linkText": "View all events →",
-        "image": "images/symposium.jpg",
+        "image": "images/celebration-2025-boateng.jpg",
         "imageAlt": "HuMed symposium"
       },
       {
@@ -63,8 +63,8 @@
     ]
   },
   "events": {
-    "bannerImage": "images/art-night-peabody.png",
-    "bannerAlt": "Yale Undergraduate Humanities in Medicine Celebrations",
+    "bannerImage": "images/celebration-2025-boateng.jpg",
+    "bannerAlt": "HuMed symposium lecture",
     "lead": "Past HuMed events from Yale Connect — symposiums, art nights, study breaks, and more. Follow @yalehumed on Instagram for what's coming next.",
     "items": [
       {
@@ -80,7 +80,7 @@
         "title": "Humanities in Medicine Celebrations 2026",
         "description": "Our annual symposium, themed \"Healing, Narratives, and the Future of Medicine\" — a fireside chat, panel, and workshop on creative expression and the human experience in medicine, with Yale faculty. Food and drinks provided.",
         "location": "Humanities Quadrangle, Room 131",
-        "image": "images/symposium.jpg",
+        "image": "images/celebration-2025-boateng.jpg",
         "imageAlt": "HuMed symposium"
       },
       {
