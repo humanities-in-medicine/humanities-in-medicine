@@ -29,16 +29,16 @@
         "imageAlt": "Books and reading materials"
       },
       {
-        "title": "Discussion Groups",
-        "description": "Regular meetings to discuss readings, films, and current issues in medical ethics and healthcare narratives.",
-        "image": "images/books.jpg",
-        "imageAlt": "Library bookshelves"
+        "title": "Guest Speakers",
+        "description": "Talks and conversations with clinicians, scholars, and alumni on the humanities, medicine, and the human experience in healthcare.",
+        "image": "images/symposium.jpg",
+        "imageAlt": "Guest speaker event"
       },
       {
-        "title": "Community Outreach",
-        "description": "We partner with campus and local organizations to promote health literacy and humanistic approaches to care.",
+        "title": "Study Breaks",
+        "description": "Low-key gatherings during the semester — food, conversation, and a chance to recharge with the HuMed community.",
         "image": "images/community.jpg",
-        "imageAlt": "Students collaborating together"
+        "imageAlt": "Students at a study break"
       }
     ],
     "highlights": [
