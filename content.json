@@ -1,0 +1,192 @@
+{
+  "site": {
+    "name": "Humanities in Medicine",
+    "tagline": "Exploring the human side of healthcare",
+    "description": "A college club exploring the intersection of humanities and medicine.",
+    "email": "humanitiesinmedicine@college.edu",
+    "instagram": "https://instagram.com/humanitiesinmedicine",
+    "instagramHandle": "@humanitiesinmedicine",
+    "year": 2026
+  },
+  "home": {
+    "lead": "We are a student organization dedicated to the intersection of humanities and medicine. Through symposiums, our student journal, and community events, we examine how literature, ethics, history, and the arts shape the practice and experience of medicine.",
+    "heroImage": "images/hero.jpg",
+    "heroImageAlt": "Healthcare professional holding a patient's hand",
+    "pillars": [
+      {
+        "title": "Annual Symposium",
+        "description": "Each year we host a symposium bringing together students, faculty, and clinicians to discuss topics at the crossroads of humanities and medicine.",
+        "image": "images/symposium.jpg",
+        "imageAlt": "Students at a symposium lecture"
+      },
+      {
+        "title": "Student Journal",
+        "description": "Our peer-reviewed journal publishes student essays, creative writing, and reflections on medicine, health, and the human experience.",
+        "image": "images/journal.jpg",
+        "imageAlt": "Books and reading materials"
+      },
+      {
+        "title": "Discussion Groups",
+        "description": "Regular meetings to discuss readings, films, and current issues in medical ethics and healthcare narratives.",
+        "image": "images/books.jpg",
+        "imageAlt": "Library bookshelves"
+      },
+      {
+        "title": "Community Outreach",
+        "description": "We partner with campus and local organizations to promote health literacy and humanistic approaches to care.",
+        "image": "images/community.jpg",
+        "imageAlt": "Students collaborating together"
+      }
+    ],
+    "highlights": [
+      {
+        "date": "Spring 2026",
+        "title": "Symposium: Narrative Medicine",
+        "description": "Keynote on storytelling in clinical practice, followed by student panel presentations.",
+        "link": "events.html",
+        "linkText": "View all events →",
+        "image": "images/symposium.jpg",
+        "imageAlt": "Symposium event"
+      },
+      {
+        "date": "Fall 2025",
+        "title": "Journal Issue Vol. 4",
+        "description": "Our latest issue features essays on medical ethics, patient narratives, and more.",
+        "link": "journal.html",
+        "linkText": "Browse past issues →",
+        "image": "images/journal.jpg",
+        "imageAlt": "Journal reading"
+      }
+    ]
+  },
+  "events": {
+    "bannerImage": "images/symposium.jpg",
+    "bannerAlt": "Conference and symposium setting",
+    "lead": "A record of our past symposiums, speaker events, and club gatherings. Check our Instagram for upcoming dates and registration details.",
+    "items": [
+      {
+        "date": "March 15, 2026",
+        "title": "Annual Symposium: Narrative Medicine",
+        "description": "Keynote by Dr. Jane Smith on the role of storytelling in clinical care. Student presentations on patient narratives and reflective writing in medicine.",
+        "location": "Campus Center, Room 201",
+        "image": "images/symposium.jpg",
+        "imageAlt": "Symposium lecture hall"
+      },
+      {
+        "date": "February 8, 2026",
+        "title": "Film Screening & Discussion",
+        "description": "Screening of The Doctor followed by a facilitated discussion on physician empathy and the doctor-patient relationship.",
+        "location": "Humanities Hall, Auditorium",
+        "image": "images/community.jpg",
+        "imageAlt": "Group discussion"
+      },
+      {
+        "date": "November 12, 2025",
+        "title": "Fall Symposium: Ethics at the Bedside",
+        "description": "Panel discussion with bioethicists and clinicians on end-of-life care, informed consent, and cultural competence in healthcare.",
+        "location": "Medical School, Lecture Hall B",
+        "image": null
+      },
+      {
+        "date": "October 3, 2025",
+        "title": "Reading Group Kickoff",
+        "description": "First meeting of the semester discussing excerpts from The Spirit Catches You and You Fall Down.",
+        "location": "Library, Room 104",
+        "image": "images/books.jpg",
+        "imageAlt": "Reading group in library"
+      },
+      {
+        "date": "April 20, 2025",
+        "title": "Spring Symposium: Art & Healing",
+        "description": "Workshops on medical illustration, poetry in hospitals, and the therapeutic role of creative expression for patients and providers.",
+        "location": "Arts Center, Gallery Space",
+        "image": null
+      },
+      {
+        "date": "March 1, 2025",
+        "title": "Guest Lecture: History of Public Health",
+        "description": "Professor Alan Reyes traced the history of epidemics and public health policy from the 19th century to the present day.",
+        "location": "History Department, Seminar Room",
+        "image": null
+      }
+    ]
+  },
+  "journal": {
+    "bannerImage": "images/journal.jpg",
+    "bannerAlt": "Books and journal reading",
+    "lead": "Our annual journal publishes student essays, creative writing, and reflections at the intersection of humanities and medicine. Browse past issues below.",
+    "issues": [
+      {
+        "title": "Volume 4 — Fall 2025",
+        "theme": "Theme: Ethics at the Bedside — 12 essays, 4 creative pieces",
+        "pdfUrl": "#",
+        "coverImage": "images/journal.jpg",
+        "coverAlt": "Volume 4 cover"
+      },
+      {
+        "title": "Volume 3 — Spring 2025",
+        "theme": "Theme: Art & Healing — 10 essays, 6 creative pieces",
+        "pdfUrl": "#",
+        "coverImage": "images/books.jpg",
+        "coverAlt": "Volume 3 cover"
+      },
+      {
+        "title": "Volume 2 — Fall 2024",
+        "theme": "Theme: Narratives of Care — 11 essays, 3 creative pieces",
+        "pdfUrl": "#",
+        "coverImage": "images/hero.jpg",
+        "coverAlt": "Volume 2 cover"
+      },
+      {
+        "title": "Volume 1 — Spring 2024",
+        "theme": "Inaugural issue — 8 essays, 5 creative pieces",
+        "pdfUrl": "#",
+        "coverImage": "images/community.jpg",
+        "coverAlt": "Volume 1 cover"
+      }
+    ],
+    "submissionNote": "We accept submissions from all students. Essays, poetry, short fiction, and reflective pieces related to medicine and the humanities are welcome."
+  },
+  "officers": {
+    "lead": "Our leadership team organizes symposiums, publishes the journal, and builds community around humanities and medicine on campus.",
+    "contactIntro": "Have questions about joining the club, submitting to the journal, or partnering on an event? Reach out — we'd love to hear from you.",
+    "members": [
+      {
+        "role": "President",
+        "name": "Alex Chen",
+        "bio": "Senior, Biology & English. Interested in narrative medicine and medical ethics.",
+        "photo": "images/officer-1.jpg"
+      },
+      {
+        "role": "Vice President",
+        "name": "Maria Gonzalez",
+        "bio": "Junior, Public Health. Focuses on health equity and community outreach.",
+        "photo": "images/officer-2.jpg"
+      },
+      {
+        "role": "Editor-in-Chief",
+        "name": "Jordan Lee",
+        "bio": "Senior, Creative Writing. Manages journal submissions and publication.",
+        "photo": "images/officer-3.jpg"
+      },
+      {
+        "role": "Treasurer",
+        "name": "Sam Patel",
+        "bio": "Sophomore, Economics. Handles club finances and event budgeting.",
+        "photo": "images/officer-4.jpg"
+      },
+      {
+        "role": "Events Coordinator",
+        "name": "Emily Watson",
+        "bio": "Junior, History. Plans symposiums, speaker events, and reading groups.",
+        "photo": "images/officer-5.jpg"
+      },
+      {
+        "role": "Social Media Chair",
+        "name": "Chris Nguyen",
+        "bio": "Sophomore, Communications. Runs our Instagram and promotional outreach.",
+        "photo": "images/officer-6.jpg"
+      }
+    ]
+  }
+}

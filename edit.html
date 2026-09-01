@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Site Content — Humanities in Medicine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", sans-serif;
+      background: #f4f4f4;
+      color: #1a1a1a;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    h1 {
+      font-family: "Libre Baskerville", serif;
+      font-size: 1.75rem;
+      margin: 0 0 0.5rem;
+    }
+    .intro {
+      color: #5c5c5c;
+      margin-bottom: 1.5rem;
+      max-width: 40rem;
+    }
+    .intro a { color: #2c4a6e; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    button, .btn-link {
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    button {
+      background: #2c4a6e;
+      color: #fff;
+      border: none;
+    }
+    button:hover { background: #1e3550; }
+    button.secondary {
+      background: #fff;
+      color: #2c4a6e;
+      border: 1px solid #2c4a6e;
+    }
+    .btn-link {
+      background: transparent;
+      color: #2c4a6e;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      width: 100%;
+      min-height: 480px;
+      font-family: ui-monospace, monospace;
+      font-size: 0.85rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .status {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .status.ok { display: block; background: #e6f4ea; color: #1e5c2e; }
+    .status.err { display: block; background: #fde8e8; color: #8b3a3a; }
+    .steps {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .steps h2 {
+      font-size: 1rem;
+      margin: 0 0 0.75rem;
+    }
+    .steps ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: #5c5c5c;
+    }
+    .steps li { margin-bottom: 0.35rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Edit Site Content</h1>
+    <p class="intro">
+      All site text, events, officers, and journal info lives in <strong>content.json</strong>.
+      Edit below, download the file, replace it in your project folder, then push to update the live site.
+      <a href="index.html">← Back to site</a>
+    </p>
+
+    <div class="steps">
+      <h2>How to publish changes</h2>
+      <ol>
+        <li>Edit the JSON below (or edit <code>content.json</code> directly in Cursor)</li>
+        <li>Click <strong>Validate</strong> to check for errors</li>
+        <li>Click <strong>Download content.json</strong> and save it into your project</li>
+        <li>Commit and push — the live site updates in about a minute</li>
+      </ol>
+    </div>
+
+    <div class="toolbar">
+      <button type="button" id="validate-btn">Validate</button>
+      <button type="button" id="download-btn">Download content.json</button>
+      <button type="button" class="secondary" id="reload-btn">Reload from site</button>
+      <a href="content.json" class="btn-link" target="_blank" rel="noopener">View raw file</a>
+    </div>
+
+    <textarea id="editor" spellcheck="false"></textarea>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script>
+    const editor = document.getElementById("editor");
+    const status = document.getElementById("status");
+
+    function showStatus(msg, ok) {
+      status.textContent = msg;
+      status.className = "status " + (ok ? "ok" : "err");
+    }
+
+    async function loadContent() {
+      const res = await fetch("content.json");
+      const text = await res.text();
+      try {
+        editor.value = JSON.stringify(JSON.parse(text), null, 2);
+        showStatus("Loaded current content.json", true);
+      } catch {
+        editor.value = text;
+        showStatus("Loaded file (could not format JSON)", false);
+      }
+    }
+
+    document.getElementById("validate-btn").addEventListener("click", () => {
+      try {
+        JSON.parse(editor.value);
+        showStatus("Valid JSON — ready to download and publish.", true);
+      } catch (e) {
+        showStatus("Invalid JSON: " + e.message, false);
+      }
+    });
+
+    document.getElementById("download-btn").addEventListener("click", () => {
+      try {
+        JSON.parse(editor.value);
+      } catch (e) {
+        showStatus("Fix JSON errors before downloading: " + e.message, false);
+        return;
+      }
+      const blob = new Blob([editor.value], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "content.json";
+      a.click();
+      URL.revokeObjectURL(a.href);
+      showStatus("Downloaded! Replace content.json in your project and push to update the live site.", true);
+    });
+
+    document.getElementById("reload-btn").addEventListener("click", loadContent);
+
+    loadContent();
+  </script>
+</body>
+</html>
