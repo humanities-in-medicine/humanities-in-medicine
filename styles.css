@@ -279,12 +279,16 @@ main {
 }
 
 .page-enter {
+  opacity: 0;
+}
+
+body.content-loaded .page-enter {
   animation: fadeUp 0.5s var(--ease) both;
 }
 
-.page-enter-delay-1 { animation-delay: 0.08s; }
-.page-enter-delay-2 { animation-delay: 0.16s; }
-.page-enter-delay-3 { animation-delay: 0.24s; }
+body.content-loaded .page-enter-delay-1 { animation-delay: 0.08s; }
+body.content-loaded .page-enter-delay-2 { animation-delay: 0.16s; }
+body.content-loaded .page-enter-delay-3 { animation-delay: 0.24s; }
 
 @keyframes fadeUp {
   from {

@@ -4,12 +4,25 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+function resolveAsset(path) {
+  if (!path) return path;
+  if (/^https?:\/\//i.test(path) || path.startsWith("mailto:") || path.startsWith("#")) {
+    return path;
+  }
+  try {
+    return new URL(path, document.baseURI).href;
+  } catch {
+    return path;
+  }
+}
+
 function cardHtml({ image, imageAlt, date, title, description, location, link, linkText }) {
   const hasImage = Boolean(image);
+  const imageSrc = hasImage ? resolveAsset(image) : "";
   const inner = `
     ${hasImage ? `
       <div class="card-img-wrap">
-        <img src="${escapeHtml(image)}" alt="${escapeHtml(imageAlt || title)}" class="card-img">
+        <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(imageAlt || title)}" class="card-img" loading="lazy" decoding="async">
       </div>` : ""}
     <div class="card-body">
       ${date ? `<p class="date">${escapeHtml(date)}</p>` : ""}
@@ -92,7 +105,7 @@ function renderHome(content) {
         </div>
       </div>
       <figure class="hero-image">
-        <img src="${escapeHtml(home.heroImage)}" alt="${escapeHtml(home.heroImageAlt)}">
+        <img src="${escapeHtml(resolveAsset(home.heroImage))}" alt="${escapeHtml(home.heroImageAlt)}" fetchpriority="high" decoding="async">
       </figure>`;
   }
 
@@ -126,7 +139,7 @@ function renderEvents(content) {
 
   const banner = document.getElementById("page-banner");
   if (banner) {
-    banner.innerHTML = `<img src="${escapeHtml(events.bannerImage)}" alt="${escapeHtml(events.bannerAlt)}">`;
+    banner.innerHTML = `<img src="${escapeHtml(resolveAsset(events.bannerImage))}" alt="${escapeHtml(events.bannerAlt)}" fetchpriority="high" decoding="async">`;
   }
 
   const lead = document.getElementById("page-lead");
@@ -161,7 +174,7 @@ function renderJournal(content) {
 
   const banner = document.getElementById("page-banner");
   if (banner) {
-    banner.innerHTML = `<img src="${escapeHtml(journal.bannerImage)}" alt="${escapeHtml(journal.bannerAlt)}">`;
+    banner.innerHTML = `<img src="${escapeHtml(resolveAsset(journal.bannerImage))}" alt="${escapeHtml(journal.bannerAlt)}" fetchpriority="high" decoding="async">`;
   }
 
   const lead = document.getElementById("page-lead");
@@ -172,7 +185,7 @@ function renderJournal(content) {
     list.innerHTML = journal.issues.map((issue) => `
       <li class="issue-item">
         <div class="issue-row">
-          <img src="${escapeHtml(issue.coverImage)}" alt="${escapeHtml(issue.coverAlt)}" class="issue-thumb">
+          <img src="${escapeHtml(resolveAsset(issue.coverImage))}" alt="${escapeHtml(issue.coverAlt)}" class="issue-thumb" loading="lazy" decoding="async">
           <div>
             <a href="${escapeHtml(issue.pdfUrl)}" class="issue-link" target="_blank" rel="noopener noreferrer">${escapeHtml(issue.title)}</a>
             <p class="issue-desc">${escapeHtml(issue.theme)}</p>
@@ -197,7 +210,7 @@ function renderJournal(content) {
 
   const flyer = document.getElementById("submission-flyer");
   if (flyer && journal.submissionFlyer) {
-    flyer.innerHTML = `<img src="${escapeHtml(journal.submissionFlyer)}" alt="HuMed Review open submission flyer">`;
+    flyer.innerHTML = `<img src="${escapeHtml(resolveAsset(journal.submissionFlyer))}" alt="HuMed Review open submission flyer" loading="lazy" decoding="async">`;
     flyer.style.display = "";
   } else if (flyer) {
     flyer.style.display = "none";
@@ -253,7 +266,7 @@ function renderOfficers(content) {
 }
 
 async function loadContent() {
-  const response = await fetch("content.json");
+  const response = await fetch(resolveAsset("content.json"), { cache: "no-cache" });
   if (!response.ok) throw new Error("Could not load content.json");
   return response.json();
 }
@@ -274,6 +287,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     if (renderers[page]) renderers[page](content);
+    document.body.classList.add("content-loaded");
   } catch (err) {
     console.error(err);
     const main = document.querySelector("main");
@@ -281,5 +295,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       main.insertAdjacentHTML("afterbegin",
         `<p style="color:#8b3a3a;padding:1rem;background:#fde8e8;border-radius:6px;">Could not load site content. Make sure content.json is present.</p>`);
     }
+    document.body.classList.add("content-loaded");
   }
 });

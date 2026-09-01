@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      var parts = location.pathname.split("/").filter(Boolean);
+      var i = parts.indexOf("humanities-in-medicine");
+      if (i !== -1) {
+        var href = "/" + parts.slice(0, i + 1).join("/") + "/";
+        var base = document.createElement("base");
+        base.href = href;
+        document.head.prepend(base);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HuMed Review — HuMed</title>
   <meta name="description" content="Past issues of the HuMed Review, Yale's humanities in medicine publication.">
