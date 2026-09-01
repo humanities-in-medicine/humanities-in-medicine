@@ -19,8 +19,8 @@
       {
         "title": "Annual Symposium",
         "description": "Each year we host a symposium bringing together Yale students, faculty, and clinicians to discuss topics at the crossroads of humanities and medicine.",
-        "image": "images/celebration-2025-boateng.jpg",
-        "imageAlt": "HuMed symposium lecture"
+        "image": "images/symposium-2025-healing-art.jpg",
+        "imageAlt": "HuMed symposium — The Healing Power of Art in Medicine"
       },
       {
         "title": "HuMed Review",
@@ -63,8 +63,8 @@
     ]
   },
   "events": {
-    "bannerImage": "images/celebration-2025-boateng.jpg",
-    "bannerAlt": "HuMed symposium lecture",
+    "bannerImage": "images/symposium-2025-healing-art.jpg",
+    "bannerAlt": "HuMed symposium — The Healing Power of Art in Medicine",
     "lead": "Past HuMed events from Yale Connect — symposiums, art nights, study breaks, and more. Follow @yalehumed on Instagram for what's coming next.",
     "items": [
       {
