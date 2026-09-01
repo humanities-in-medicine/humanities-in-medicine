@@ -157,38 +157,32 @@
       {
         "role": "President",
         "name": "Constanza Biney",
-        "bio": "",
-        "photo": "images/officer-1.jpg"
+        "bio": ""
       },
       {
         "role": "Vice President",
         "name": "Abena Opoku",
-        "bio": "",
-        "photo": "images/officer-2.jpg"
+        "bio": ""
       },
       {
         "role": "Treasurer",
         "name": "Gaurav Chaudhuri",
-        "bio": "",
-        "photo": "images/officer-3.jpg"
+        "bio": ""
       },
       {
         "role": "HuMed Review Editor-in-Chief",
         "name": "Netta Dobzinski",
-        "bio": "",
-        "photo": "images/officer-4.jpg"
+        "bio": ""
       },
       {
         "role": "Social Media Manager",
         "name": "Noa Dobzinski",
-        "bio": "",
-        "photo": "images/officer-5.jpg"
+        "bio": ""
       },
       {
         "role": "Event Coordinator",
         "name": "Leslie Diaz",
-        "bio": "",
-        "photo": "images/officer-6.jpg"
+        "bio": ""
       }
     ]
   }
