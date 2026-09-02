@@ -143,8 +143,8 @@
   },
   "journal": {
     "name": "HuMed Review",
-    "bannerImage": "images/humed-review-open-submission.png",
-    "bannerAlt": "HuMed Review",
+    "bannerImage": "images/humed-review-banner.jpg",
+    "bannerAlt": "HuMed Review — open submission marbled art",
     "lead": "The HuMed Review is Yale's undergraduate publication at the intersection of humanities and medicine. Browse past issues below, or submit your work to our open call.",
     "issues": [
       {
