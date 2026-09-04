@@ -175,6 +175,11 @@ img {
   border: 1px solid var(--color-border);
 }
 
+.submission-deadline,
+#submission-contact {
+  display: none;
+}
+
 .submission-deadline {
   font-weight: 600;
   color: var(--color-accent);

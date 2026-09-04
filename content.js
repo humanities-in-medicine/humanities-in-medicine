@@ -197,45 +197,33 @@ function renderJournal(content) {
 
   const submissionsOpen = journal.submissionsOpen === true;
   const submitSection = document.getElementById("submit");
-  if (submitSection) {
-    submitSection.hidden = !submissionsOpen;
-  }
-
-  if (!submissionsOpen) {
-    return;
-  }
+  if (submitSection) submitSection.hidden = false;
 
   const heading = document.getElementById("submission-heading");
-  if (heading) heading.textContent = "Open Submission";
+  if (heading) heading.textContent = submissionsOpen ? "Open Submission" : "Call for Submissions";
 
   const note = document.getElementById("submission-note");
-  if (note) note.textContent = journal.submissionNote;
+  if (note) note.textContent = journal.submissionNote || "";
 
   const deadline = document.getElementById("submission-deadline");
   if (deadline) {
-    if (journal.submissionDeadline) {
-      deadline.textContent = `Submissions due ${journal.submissionDeadline}.`;
-      deadline.style.display = "";
-    } else {
-      deadline.style.display = "none";
-    }
+    deadline.textContent = "";
+    deadline.replaceChildren();
+    deadline.style.display = "none";
   }
 
   const flyer = document.getElementById("submission-flyer");
   if (flyer && journal.submissionFlyer) {
-    flyer.innerHTML = `<img src="${escapeHtml(resolveAsset(journal.submissionFlyer))}" alt="HuMed Review open submission flyer" loading="lazy" decoding="async">`;
+    flyer.innerHTML = `<img src="${escapeHtml(resolveAsset(journal.submissionFlyer))}" alt="HuMed Review call for submissions flyer" loading="lazy" decoding="async">`;
     flyer.style.display = "";
   } else if (flyer) {
     flyer.style.display = "none";
   }
 
   const submissionBlock = document.getElementById("submission-contact");
-  if (submissionBlock && journal.submissionUrl) {
-    submissionBlock.innerHTML = `<a href="${escapeHtml(journal.submissionUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Submit to the HuMed Review</a>`;
-  } else if (submissionBlock && site.email) {
-    submissionBlock.innerHTML = `Email submissions to <a href="mailto:${escapeHtml(site.email)}">${escapeHtml(site.email)}</a>.`;
-  } else if (submissionBlock && site.instagram) {
-    submissionBlock.innerHTML = `Send submissions via DM on <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a>.`;
+  if (submissionBlock) {
+    submissionBlock.replaceChildren();
+    submissionBlock.style.display = "none";
   }
 }
 
