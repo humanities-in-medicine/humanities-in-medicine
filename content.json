@@ -120,8 +120,8 @@
         "title": "Humanities & Medicine Meet & Greet",
         "description": "Meet other students interested in the intersections of medicine and the humanities, and learn about HuMed over food.",
         "location": "WLH 114",
-        "image": "images/community.jpg",
-        "imageAlt": "Meet and greet"
+        "image": "images/meet-greet.jpg",
+        "imageAlt": "Yale HuMed Meet & Greet flyer"
       },
       {
         "date": "April 29, 2025",
@@ -145,7 +145,7 @@
     "name": "HuMed Review",
     "bannerImage": "images/humed-review-banner.jpg",
     "bannerAlt": "HuMed Review — open submission marbled art",
-    "lead": "The HuMed Review is Yale's undergraduate publication at the intersection of humanities and medicine. Browse past issues below, or submit your work to our open call.",
+    "lead": "The HuMed Review is Yale's undergraduate publication at the intersection of humanities and medicine. Browse past issues below.",
     "issues": [
       {
         "title": "HuMed Review — Inaugural Publication",
@@ -155,7 +155,8 @@
         "coverAlt": "HuMed Review inaugural publication"
       }
     ],
-    "submissionNote": "Yale Undergraduate Humanities in Medicine Celebrations is excited to announce our call for submissions for the Yale Undergraduate Humanities in Medicine Review. We are looking for visual art, creative writing, or scholarly work at the intersection of the humanities and medicine, or art and science. All Yale community members welcome.",
+    "submissionNote": "In Spring 2026, Yale Undergraduate Humanities in Medicine Celebrations invited submissions of visual art, creative writing, or scholarly work at the intersection of the humanities and medicine, or art and science. All Yale community members were welcome.",
+    "submissionsOpen": false,
     "submissionDeadline": "April 3, 2026",
     "submissionUrl": "https://tinyurl.com/HuMedJournal",
     "submissionFlyer": "images/humed-review-open-submission.png"

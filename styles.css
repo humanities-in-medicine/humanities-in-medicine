@@ -113,8 +113,9 @@ img {
 
 .card-img {
   width: 100%;
-  height: 140px;
+  height: 220px;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.4s var(--ease);
 }
 
@@ -149,8 +150,23 @@ img {
 }
 
 .submission-flyer {
+  position: relative;
   margin: 0 0 1.5rem;
   max-width: 420px;
+}
+
+.submission-closed-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
 }
 
 .submission-flyer img {
@@ -163,6 +179,10 @@ img {
   font-weight: 600;
   color: var(--color-accent);
   margin: 0 0 1rem;
+}
+
+.submission-deadline--closed {
+  color: var(--color-muted);
 }
 
 .issue-row {

@@ -195,13 +195,23 @@ function renderJournal(content) {
       </li>`).join("");
   }
 
+  const submissionsOpen = journal.submissionsOpen === true;
+
+  const heading = document.getElementById("submission-heading");
+  if (heading) {
+    heading.textContent = submissionsOpen ? "Open Submission" : "Past Call for Submissions";
+  }
+
   const note = document.getElementById("submission-note");
   if (note) note.textContent = journal.submissionNote;
 
   const deadline = document.getElementById("submission-deadline");
   if (deadline) {
     if (journal.submissionDeadline) {
-      deadline.textContent = `Submissions due ${journal.submissionDeadline}.`;
+      deadline.textContent = submissionsOpen
+        ? `Submissions due ${journal.submissionDeadline}.`
+        : `Submissions closed ${journal.submissionDeadline}. This call is no longer open.`;
+      deadline.classList.toggle("submission-deadline--closed", !submissionsOpen);
       deadline.style.display = "";
     } else {
       deadline.style.display = "none";
@@ -210,19 +220,25 @@ function renderJournal(content) {
 
   const flyer = document.getElementById("submission-flyer");
   if (flyer && journal.submissionFlyer) {
-    flyer.innerHTML = `<img src="${escapeHtml(resolveAsset(journal.submissionFlyer))}" alt="HuMed Review open submission flyer" loading="lazy" decoding="async">`;
+    const badge = submissionsOpen ? "" : `<span class="submission-closed-badge">Closed</span>`;
+    flyer.innerHTML = `<img src="${escapeHtml(resolveAsset(journal.submissionFlyer))}" alt="${submissionsOpen ? "HuMed Review open submission flyer" : "HuMed Review Spring 2026 call for submissions flyer"}" loading="lazy" decoding="async">${badge}`;
+    flyer.classList.toggle("submission-flyer--closed", !submissionsOpen);
     flyer.style.display = "";
   } else if (flyer) {
     flyer.style.display = "none";
   }
 
   const submissionBlock = document.getElementById("submission-contact");
-  if (submissionBlock && journal.submissionUrl) {
-    submissionBlock.innerHTML = `<a href="${escapeHtml(journal.submissionUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Submit to the HuMed Review</a>`;
-  } else if (submissionBlock && site.email) {
-    submissionBlock.innerHTML = `Email submissions to <a href="mailto:${escapeHtml(site.email)}">${escapeHtml(site.email)}</a>.`;
-  } else if (submissionBlock && site.instagram) {
-    submissionBlock.innerHTML = `Send submissions via DM on <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a>.`;
+  if (submissionBlock) {
+    if (submissionsOpen && journal.submissionUrl) {
+      submissionBlock.innerHTML = `<a href="${escapeHtml(journal.submissionUrl)}" class="btn" target="_blank" rel="noopener noreferrer">Submit to the HuMed Review</a>`;
+    } else if (submissionsOpen && site.email) {
+      submissionBlock.innerHTML = `Email submissions to <a href="mailto:${escapeHtml(site.email)}">${escapeHtml(site.email)}</a>.`;
+    } else if (submissionsOpen && site.instagram) {
+      submissionBlock.innerHTML = `Send submissions via DM on <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a>.`;
+    } else {
+      submissionBlock.innerHTML = `Follow <a href="${escapeHtml(site.instagram)}" target="_blank" rel="noopener noreferrer">${escapeHtml(site.instagramHandle)}</a> for the next call.`;
+    }
   }
 }
 
